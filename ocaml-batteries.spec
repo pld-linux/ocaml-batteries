@@ -8,7 +8,6 @@ Group:		Libraries
 Source0:	https://forge.ocamlcore.org/frs/download.php/1363/%{module}-%{version}.tar.gz
 # Source0-md5:	42063b5f2da9a311ff16799b8bec4ba5
 URL:		http://batteries.forge.ocamlcore.org/
-#BuildRequires:	-devel
 BuildRequires:	ocaml >= 3.04-7
 %requires_eq	ocaml-runtime
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -67,6 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%dir %{_libdir}/ocaml/%{module}
 %attr(755,root,root) %{_libdir}/ocaml/%{module}/*.cmxs
 %{_libdir}/ocaml/%{module}/battop.ml
 %attr(755,root,root) %{_libdir}/ocaml/%{module}/ocaml
