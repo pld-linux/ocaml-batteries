@@ -2,7 +2,7 @@
 Summary:	OCaml Batteries Included
 Name:		ocaml-%{module}
 Version:	2.2
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	https://forge.ocamlcore.org/frs/download.php/1363/%{module}-%{version}.tar.gz
@@ -23,19 +23,18 @@ Pakiet ten zawiera binaria potrzebne do uruchamiania programów
 używających tej biblioteki.
 
 %package devel
-Summary:	TEMPLATE binding for OCaml - development part
-Summary(pl.UTF-8):	Wiązania TEMPLATE dla OCamla - cześć programistyczna
+Summary:	OCaml Batteries Included - development part
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 %requires_eq	ocaml
 
 %description devel
 This package contains files needed to develop OCaml programs using
-TEMPLATE library.
+batteries library.
 
 %description devel -l pl.UTF-8
 Pakiet ten zawiera pliki niezbędne do tworzenia programów używających
-TEMPLATE biblioteki.
+biblioteki batteries.
 
 %prep
 %setup -q -n %{module}-%{version}
