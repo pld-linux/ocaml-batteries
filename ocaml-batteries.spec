@@ -2,7 +2,7 @@
 Summary:	OCaml Batteries Included
 Name:		ocaml-%{module}
 Version:	2.2
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Libraries
 Source0:	https://forge.ocamlcore.org/frs/download.php/1363/%{module}-%{version}.tar.gz
