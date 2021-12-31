@@ -1,5 +1,6 @@
 %define		module	batteries
 Summary:	OCaml Batteries Included
+Summary(pl.UTF-8):	OCaml Batteries Included - baterie dołączone do OCamla
 Name:		ocaml-%{module}
 Version:	2.2
 Release:	3
@@ -16,14 +17,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This package contains files needed to run bytecode executables using
-this library.
+OCaml batteries library.
 
 %description -l pl.UTF-8
 Pakiet ten zawiera binaria potrzebne do uruchamiania programów
-używających tej biblioteki.
+używających biblioteki OCamla batteries.
 
 %package devel
 Summary:	OCaml Batteries Included - development part
+Summary(pl.UTF-8):	OCaml Batteries Included - część programistyczna
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 %requires_eq	ocaml
@@ -33,8 +35,8 @@ This package contains files needed to develop OCaml programs using
 batteries library.
 
 %description devel -l pl.UTF-8
-Pakiet ten zawiera pliki niezbędne do tworzenia programów używających
-biblioteki batteries.
+Pakiet ten zawiera pliki niezbędne do tworzenia programów w OCamlu
+używających biblioteki batteries.
 
 %prep
 %setup -q -n %{module}-%{version}
