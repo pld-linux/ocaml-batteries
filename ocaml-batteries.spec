@@ -62,7 +62,8 @@ używających biblioteki batteries.
 %setup -q -n batteries-included-%{version}
 
 %build
-%{__make} -j1 all
+%{__make} -j1 all \
+	%{!?with_ocaml_opt:BATTERIES_NATIVE=no}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -70,6 +71,7 @@ export OCAMLFIND_DESTDIR=$RPM_BUILD_ROOT%{_libdir}/ocaml
 install -d $OCAMLFIND_DESTDIR
 
 %{__make} install \
+	%{!?with_ocaml_opt:BATTERIES_NATIVE=no} \
 	DESTDIR=$RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
