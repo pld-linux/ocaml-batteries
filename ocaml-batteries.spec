@@ -21,6 +21,8 @@ Source0:	https://github.com/ocaml-batteries-team/batteries-included/archive/v%{v
 URL:		https://github.com/ocaml-batteries-team/batteries-included
 BuildRequires:	ocaml >= 1:3.12.1
 BuildRequires:	ocaml-findlib >= 1.5.3
+BuildRequires:	ocaml-num-devel
+BuildRequires:	ocaml-ocamlbuild
 %requires_eq	ocaml-runtime
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -45,6 +47,7 @@ Summary:	OCaml Batteries Included - development part
 Summary(pl.UTF-8):	OCaml Batteries Included - część programistyczna
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	ocaml-num-devel
 %requires_eq	ocaml
 
 %description devel
